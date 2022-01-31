@@ -1,0 +1,37 @@
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  width: 100%;
+  max-width: 1385px;
+  top: 2.5rem;
+  left: 3.4rem;
+}
+
+.logo {
+  flex: 100%;
+}
+
+.logo a {
+  display: inline-block;
+}
+
+.navbar {
+  flex: 100%;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  background: rgba(255, 255, 255, 0.576);
+}
+
+.navbar li:not(:last-of-type) {
+  margin-right: 2rem;
+}
+
+.navbar a {
+  text-decoration: none;
+}
