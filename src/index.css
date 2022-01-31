@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../src/assets/home/background-home-desktop.jpg") center/cover
+    no-repeat;
+  position: relative;
+}
