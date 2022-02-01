@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./App.module.css";
-import Header from "./Components/UI/Header";
+import Home from "./Components/Home/Home";
 
 function App() {
   return (
     <div className={styles.wrapper}>
-      <Header />
+      <Home />
     </div>
   );
 }

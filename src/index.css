@@ -1,3 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+
+:root {
+  /* global styles for font-size and font-family */
+  --heading-1: 9.4rem "Bellefair", sans-serif;
+  --heading-2: 6.3rem "Bellefair", sans-serif;
+  --heading-3: 3.5rem "Bellefair", sans-serif;
+  --heading-4: 2rem "Bellefair", sans-serif;
+  --heading-5: 1.75rem "Barlow Condensed", sans-serif;
+  --sub-heading-1: 1.75rem "Bellefair", sans-serif;
+  --sub-heading-2: 0.88rem "Barlow Condensed", sans-serif;
+  --nav-text: 1rem "Barlow Condensed", sans-serif;
+  --body-text: 0.88rem "Barlow Condensed", sans-serif;
+
+  /* global styles for colors */
+  --white: #ffffff;
+  --powder-blue: #d0d6f9;
+  --dark-blue: #0b0d17;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +32,14 @@ html {
 body {
   position: relative;
   width: 100%;
+  height: 900px;
   min-height: 100vh;
   background: url("../src/assets/home/background-home-desktop.jpg") center/cover
     no-repeat;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+iframe {
+  pointer-events: none;
 }

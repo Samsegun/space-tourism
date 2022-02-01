@@ -1,0 +1,32 @@
+.button {
+  position: absolute;
+  width: 274px;
+  height: 274px;
+  left: 1001px;
+  top: 495px;
+  color: var(--dark-blue);
+  font: var(--heading-4);
+  letter-spacing: 2.35px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 1364px) {
+  .button {
+    left: 900px;
+  }
+}
+
+@media (max-width: 1252px) {
+  .button {
+    left: 800px;
+  }
+}
+
+@media (max-width: 1160px) {
+  .button {
+    left: 800px;
+  }
+}

@@ -1,0 +1,33 @@
+.main {
+  position: absolute;
+  top: 387px;
+  left: 165px;
+  width: 450px;
+  height: 382px;
+  color: var(--white);
+  /* background: rgba(255, 255, 255, 0.707); */
+}
+
+.intro {
+  font: var(--heading-5);
+  text-transform: uppercase;
+  letter-spacing: 4.75px;
+}
+
+.title {
+  font: var(--heading-1);
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+.text {
+  font: var(--body-text);
+  letter-spacing: 2.7px;
+  line-height: 2;
+}
+
+@media (max-width: 1252px) {
+  .main {
+    left: 120px;
+  }
+}
