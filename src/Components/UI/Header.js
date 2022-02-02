@@ -27,7 +27,7 @@ const Header = () => {
 
       <nav className={styles.navbar}>
         <ul>
-          <li>
+          <li className={styles.active}>
             <a href="/">
               <span className={styles["link-span"]}>00</span> Home
             </a>
