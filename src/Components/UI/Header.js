@@ -1,10 +1,11 @@
 import styles from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <a href="/">
+        <Link to="/">
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
             <g fill="none" fillRule="evenodd">
               <circle cx="24" cy="24" r="24" fill="#FFF" />
@@ -14,7 +15,7 @@ const Header = () => {
               />
             </g>
           </svg>
-        </a>
+        </Link>
       </div>
 
       <button className={styles.toggle}>
@@ -28,24 +29,24 @@ const Header = () => {
       <nav className={styles.navbar}>
         <ul>
           <li className={styles.active}>
-            <a href="/">
+            <Link to="/">
               <span className={styles["link-span"]}>00</span> Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/destination">
               <span className={styles["link-span"]}>01</span> Destination
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/">
               <span className={styles["link-span"]}>02</span> Crew
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/">
               <span className={styles["link-span"]}>03</span> Technology
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
