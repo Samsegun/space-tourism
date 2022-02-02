@@ -19,7 +19,7 @@ const Header = () => {
 
       <button className={styles.toggle}>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
-          <g fill="#D0D6F9" fill-rule="evenodd">
+          <g fill="#D0D6F9" fillRule="evenodd">
             <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
           </g>
         </svg>
@@ -29,22 +29,22 @@ const Header = () => {
         <ul>
           <li>
             <a href="/">
-              <span>00</span> Home
+              <span className={styles["link-span"]}>00</span> Home
             </a>
           </li>
           <li>
             <a href="/">
-              <span>01</span> Destination
+              <span className={styles["link-span"]}>01</span> Destination
             </a>
           </li>
           <li>
             <a href="/">
-              <span>02</span> Crew
+              <span className={styles["link-span"]}>02</span> Crew
             </a>
           </li>
           <li>
             <a href="/">
-              <span>03</span> Technology
+              <span className={styles["link-span"]}>03</span> Technology
             </a>
           </li>
         </ul>

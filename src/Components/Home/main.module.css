@@ -1,14 +1,111 @@
 .main {
-  position: absolute;
-  top: 387px;
-  left: 165px;
-  width: 450px;
-  height: 382px;
+  text-align: center;
   color: var(--white);
-  /* background: rgba(255, 255, 255, 0.707); */
+  margin: 6rem auto;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
 }
 
 .intro {
+  font: 1.1rem "Barlow Condensed", sans-serif;
+  color: var(--powder-blue);
+  letter-spacing: 4px;
+}
+
+.title {
+  font: var(--heading-2);
+  margin: 2rem 0;
+}
+
+.text {
+  text-transform: capitalize;
+  font: var(--body-text);
+  color: var(--powder-blue);
+  letter-spacing: 2.7px;
+  line-height: 2;
+}
+/* .explore {
+  flex: 100%;
+  font-size: 10rem;
+} */
+
+@media (min-width: 535px) {
+  .intro {
+    font-size: 2rem;
+  }
+  .title {
+    font-size: 9rem;
+  }
+  .text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    margin: 13rem auto 6rem;
+    width: 80%;
+  }
+  .intro {
+    font-size: 1.3rem;
+  }
+  .title {
+    font-size: 10rem;
+  }
+  .text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 929px) {
+  .main {
+    margin-top: 0;
+    position: absolute;
+    top: 387px;
+    left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    width: 90%;
+  }
+  .main div {
+    flex: 100%;
+    width: 450px;
+  }
+  .explore {
+    flex: 100%;
+  }
+  .intro {
+    font: var(--heading-5);
+  }
+  .title {
+    font: var(--heading-1);
+  }
+  .text {
+    font: var(--body-text);
+    width: 450px;
+    margin: 0 auto;
+    line-height: 2.5;
+    text-align: left;
+  }
+}
+
+/* .main { */
+/* position: absolute;
+  top: 387px;
+  left: 165px; */
+/* width: 450px;
+  height: 382px;
+  color: var(--white); */
+/* background: rgba(255, 255, 255, 0.707); */
+/* } */
+
+/* .intro {
   font: var(--heading-5);
   text-transform: uppercase;
   letter-spacing: 4.75px;
@@ -31,3 +128,38 @@
     left: 120px;
   }
 }
+
+@media (min-width: 300px) {
+  .main {
+    width: 90%;
+    height: 720px;
+    margin: 4rem auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .intro {
+    font-size: 1rem;
+  }
+  .title {
+    font-size: 6rem;
+    margin: 2rem 0;
+  }
+}
+
+@media (min-width: 535px) {
+  .main {
+    height: 723px;
+  }
+  .intro {
+    font-size: 2rem;
+  }
+  .title {
+    font-size: 9rem;
+  }
+  .text {
+    font-size: 1rem;
+  }
+} */

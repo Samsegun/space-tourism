@@ -1,9 +1,6 @@
 .button {
-  position: absolute;
-  width: 274px;
-  height: 274px;
-  left: 1001px;
-  top: 495px;
+  width: 220px;
+  height: 220px;
   color: var(--dark-blue);
   font: var(--heading-4);
   letter-spacing: 2.35px;
@@ -13,7 +10,13 @@
   outline: none;
 }
 
-@media (max-width: 1364px) {
+/* @media (min-width: 929px) {
+  .button {
+    width: 274px;
+  }
+} */
+
+/* @media (max-width: 1364px) {
   .button {
     left: 900px;
   }
@@ -30,3 +33,10 @@
     left: 800px;
   }
 }
+
+@media (min-width: 300px) {
+  .button {
+    position: static;
+    left: 50%;
+  }
+} */
