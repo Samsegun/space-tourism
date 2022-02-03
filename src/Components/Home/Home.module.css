@@ -1,0 +1,10 @@
+.main-wrapper {
+  /* position: absolute; */
+  background: url("../../assets/home/background-home-desktop.jpg") center/cover
+    no-repeat;
+  /* position: fixed; */
+  background: teal;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
