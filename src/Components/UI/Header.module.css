@@ -1,10 +1,11 @@
-/* .header {
-  position: relative;
+.header {
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1.5rem auto;
   z-index: 0;
+  /* margin: 1.5rem auto;
+   */
 }
 
 .toggle {
@@ -16,7 +17,7 @@
 .navbar {
   display: none;
 }
-
+/*
 @media (min-width: 768px) {
   .header {
     margin-top: 0;

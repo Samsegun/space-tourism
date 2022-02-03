@@ -1,8 +1,8 @@
 .button {
-  width: 220px;
-  height: 220px;
+  width: 160px;
+  height: 160px;
   color: var(--dark-blue);
-  font: var(--heading-4);
+  font: var(--sub-heading-1);
   letter-spacing: 2.35px;
   border-radius: 50%;
   cursor: pointer;

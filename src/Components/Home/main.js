@@ -15,7 +15,7 @@ const Main = () => {
         </p>
       </div>
 
-      <div>
+      <div className={styles.button}>
         <Explore className={styles.explore} />
       </div>
     </main>

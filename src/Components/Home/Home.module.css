@@ -1,10 +1,20 @@
 .main-wrapper {
-  /* position: absolute; */
-  background: url("../../assets/home/background-home-desktop.jpg") center/cover
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem 1rem;
+  background: url("../../assets/home/background-home-mobile.jpg") center/cover
     no-repeat;
   /* position: fixed; */
-  background: teal;
+  /* background: teal; */
   width: 100%;
-  height: 100%;
-  z-index: 1;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
