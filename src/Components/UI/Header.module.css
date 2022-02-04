@@ -5,14 +5,9 @@
   justify-content: space-between;
   align-items: center;
   z-index: 0;
-  /* margin: 1.5rem auto;
-   */
 }
-
-.toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
+.header .hello {
+  background: blue;
 }
 
 .navbar {
@@ -33,9 +28,6 @@
     width: 60%;
     height: 100%;
     z-index: -1;
-  }
-  .toggle {
-    display: none;
   }
   .logo {
     flex: 100%;

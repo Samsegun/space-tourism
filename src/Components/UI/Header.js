@@ -1,7 +1,17 @@
+import { useState } from "react";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
+import NavbarButton from "./NavbarButton";
 
 const Header = () => {
+  const [color, setColor] = useState("");
+
+  const navbuttonHandler = Event => {
+    console.log(Event);
+
+    setColor(styles.hello);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -18,13 +28,7 @@ const Header = () => {
         </Link>
       </div>
 
-      <button className={styles.toggle}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
-          <g fill="#D0D6F9" fillRule="evenodd">
-            <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
-          </g>
-        </svg>
-      </button>
+      <NavbarButton className={color} onClick={navbuttonHandler} />
 
       <nav className={styles.navbar}>
         <ul>

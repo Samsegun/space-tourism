@@ -1,0 +1,11 @@
+.toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .toggle {
+    display: none;
+  }
+}
