@@ -1,14 +1,5 @@
 .wrapper {
   position: relative;
-  max-width: 1440px;
   min-height: 100vh;
   z-index: 0;
-  /* width: 90%;
-  margin: 0 auto; */
 }
-
-/* @media (min-width: 768px) {
-  .wrapper {
-    width: 100%;
-  }
-} */

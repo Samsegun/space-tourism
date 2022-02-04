@@ -1,13 +1,6 @@
 .main {
   text-align: center;
   margin-top: 4.5rem;
-  /*  color: var(--white);
-  height: 700px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;*/
 }
 
 .intro {
@@ -26,7 +19,6 @@
 }
 
 .text {
-  /* text-transform: capitalize; */
   font: var(--body-text);
   color: var(--powder-blue);
   letter-spacing: 2.5px;
@@ -37,65 +29,53 @@
 .button {
   padding: 3rem;
 }
-/*
+
 @media (min-width: 535px) {
-  .intro {
-    font-size: 2rem;
-  }
-  .title {
-    font-size: 9rem;
-  }
   .text {
-    font-size: 1rem;
+    padding: 0 2rem;
   }
 }
 
 @media (min-width: 768px) {
   .main {
-    margin: 13rem auto 6rem;
+    margin: 10.5rem auto 0;
     width: 80%;
   }
   .intro {
-    font-size: 1.3rem;
+    font: var(--heading-5);
+    letter-spacing: 4.75px;
   }
   .title {
     font-size: 10rem;
   }
   .text {
     font-size: 0.9rem;
+    padding: 0 4rem;
   }
 }
 
-@media (min-width: 929px) {
+@media (min-width: 969px) {
   .main {
-    margin-top: 0;
-    position: absolute;
-    top: 387px;
-    left: 5%;
+    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    height: auto;
-    width: 90%;
   }
   .main div {
-    flex: 100%;
     width: 450px;
   }
-  .explore {
-    flex: 100%;
-  }
-  .intro {
-    font: var(--heading-5);
+  .button {
+    padding: 0;
+    display: flex;
+    justify-self: flex-end;
+    justify-content: center;
+    align-items: flex-end;
   }
   .title {
     font: var(--heading-1);
   }
   .text {
-    font: var(--body-text);
-    width: 450px;
-    margin: 0 auto;
-    line-height: 2.5;
+    letter-spacing: 2.7px;
     text-align: left;
+    padding: 0;
   }
-} */
+}

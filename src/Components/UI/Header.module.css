@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -17,15 +18,11 @@
 .navbar {
   display: none;
 }
-/*
+
 @media (min-width: 768px) {
   .header {
-    margin-top: 0;
-    position: absolute;
-    top: -208px;
-    right: 0;
-    height: 96px;
-    width: 95%;
+    padding: 0 0 0 2rem;
+    min-height: 96px;
   }
   .header::after {
     content: "";
@@ -55,20 +52,11 @@
     align-items: center;
     padding-right: 0.5rem;
   }
-  experimental slider 
-  .navbar ul::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 70px;
-    height: 3px;
-    background: var(--white);
-  }
   .navbar li span {
     display: none;
   }
   .navbar li {
-    height: 100%;
+    height: 96px;
     display: flex;
     align-items: center;
   }
@@ -82,14 +70,13 @@
     font: var(--nav-text);
     letter-spacing: 2px;
     text-decoration: none;
-    color: var(--white);
+    color: var(--powder-blue);
   }
 }
 
-@media (min-width: 929px) {
+@media (min-width: 969px) {
   .header {
-    margin-top: 20px;
-    top: 0;
+    top: 2rem;
   }
   .header::before {
     content: "";
@@ -103,13 +90,6 @@
   }
   .navbar li span {
     display: inline-block;
-  }
-  .navbar a {
-    color: var(--powder-blue);
-    font-weight: bold;
-  }
-
-  .navbar .link-span {
     color: var(--white);
   }
-} */
+}

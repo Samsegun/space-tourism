@@ -10,33 +10,16 @@
   outline: none;
 }
 
-/* @media (min-width: 929px) {
+@media (min-width: 768px) {
   .button {
-    width: 274px;
-  }
-} */
-
-/* @media (max-width: 1364px) {
-  .button {
-    left: 900px;
+    width: 200px;
+    height: 200px;
   }
 }
 
-@media (max-width: 1252px) {
+@media (min-width: 929px) {
   .button {
-    left: 800px;
+    max-width: 274px;
+    max-height: 274px;
   }
 }
-
-@media (max-width: 1160px) {
-  .button {
-    left: 800px;
-  }
-}
-
-@media (min-width: 300px) {
-  .button {
-    position: static;
-    left: 50%;
-  }
-} */
