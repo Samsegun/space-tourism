@@ -8,15 +8,14 @@ const NavbarMenu = props => {
 
   return (
     <>
-      {/* {props.closeNav && ( */}
       <div className={styles["mobilenav"]}>
         <CloseNavbar
           className={styles.close}
           closeNavMenu={props.closeNavMenu}
         />
         <ul>
-          <li>
-            <Link className={styles.active} to="">
+          <li className={styles.active}>
+            <Link to="">
               <span>00</span> Home
             </Link>
           </li>
@@ -37,7 +36,6 @@ const NavbarMenu = props => {
           </li>
         </ul>
       </div>
-      {/* )} */}
     </>
   );
 };

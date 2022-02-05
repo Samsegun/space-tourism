@@ -33,8 +33,10 @@ const Header = () => {
         </Link>
       </div>
 
-      <NavbarButton onClick={navbuttonHandler} />
+      {/* show toggle button when mobilenav is closed and vice-versa */}
+      {!showNav && <NavbarButton onClick={navbuttonHandler} />}
 
+      {/* show mobile menu when mobilenav toggle  button is closed */}
       {showNav && <NavbarMenu closeNavMenu={closeNavMenu} />}
 
       <nav className={styles.navbar}>

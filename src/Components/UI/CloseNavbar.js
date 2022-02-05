@@ -1,7 +1,6 @@
 const CloseNavbar = props => {
   // close mobile navbar handler
   const closeNavHandler = Event => {
-    console.log(Event);
     props.closeNavMenu();
   };
 

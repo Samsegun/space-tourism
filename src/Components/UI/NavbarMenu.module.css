@@ -32,6 +32,14 @@
   margin: 2rem 0;
 }
 
+.mobilenav li:hover {
+  border-right: 3px solid var(--powder-blue);
+}
+
+.mobilenav li.active {
+  border-right: 4px solid var(--white);
+}
+
 .mobilenav a {
   text-decoration: none;
   text-transform: uppercase;
@@ -40,10 +48,6 @@
   color: var(--powder-blue);
   font: 1.3rem "Barlow Condensed", sans-serif;
   letter-spacing: 2px;
-}
-
-.mobilenav a.active {
-  border-right: 4px solid var(--white);
 }
 
 .mobilenav span {

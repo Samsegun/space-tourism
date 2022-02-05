@@ -52,6 +52,9 @@
     display: flex;
     align-items: center;
   }
+  .navbar li:hover {
+    border-bottom: 4px solid var(--powder-blue);
+  }
   .navbar li.active {
     border-bottom: 3px solid var(--white);
   }
