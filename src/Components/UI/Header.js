@@ -2,14 +2,19 @@ import { useState } from "react";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 import NavbarButton from "./NavbarButton";
+import NavbarMenu from "./NavbarMenu";
 
 const Header = () => {
-  const [color, setColor] = useState("");
+  const [showNav, setShowNav] = useState(false);
 
   const navbuttonHandler = Event => {
     console.log(Event);
+    // setShowNav(showNav ? false : true);
+    setShowNav(true);
+  };
 
-    setColor(styles.hello);
+  const closeNavMenu = () => {
+    setShowNav(false);
   };
 
   return (
@@ -28,7 +33,9 @@ const Header = () => {
         </Link>
       </div>
 
-      <NavbarButton className={color} onClick={navbuttonHandler} />
+      <NavbarButton onClick={navbuttonHandler} />
+
+      {showNav && <NavbarMenu closeNavMenu={closeNavMenu} />}
 
       <nav className={styles.navbar}>
         <ul>

@@ -6,9 +6,9 @@
   align-items: center;
   z-index: 0;
 }
-.header .hello {
+/* .header .hello {
   background: blue;
-}
+} */
 
 .navbar {
   display: none;

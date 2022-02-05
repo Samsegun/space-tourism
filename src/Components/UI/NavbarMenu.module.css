@@ -1,0 +1,51 @@
+.mobilenav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  background: rgba(41, 48, 82, 0.95);
+  z-index: 2;
+}
+
+.mobilenav .close {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 7%;
+  right: 13%;
+  color: var(--powder-blue);
+  transform: scale(2);
+  z-index: 4;
+  cursor: pointer;
+}
+
+.mobilenav ul {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  padding: 7rem 0 0 2rem;
+  list-style: none;
+}
+
+.mobilenav li {
+  margin: 2rem 0;
+}
+
+.mobilenav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 100%;
+  color: var(--powder-blue);
+  font: 1.3rem "Barlow Condensed", sans-serif;
+  letter-spacing: 2px;
+}
+
+.mobilenav a.active {
+  border-right: 4px solid var(--white);
+}
+
+.mobilenav span {
+  color: var(--white);
+}
