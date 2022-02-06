@@ -5,7 +5,12 @@ import NavbarButton from "./NavbarButton";
 import NavbarMenu from "./NavbarMenu";
 
 const Header = () => {
+  const navLinks = ["home", "destination", "crew", "technology"];
   const [showNav, setShowNav] = useState(false);
+
+  const navLinkHandler = () => {
+    console.log("hi");
+  };
 
   const navbuttonHandler = Event => {
     console.log(Event);
@@ -41,7 +46,18 @@ const Header = () => {
 
       <nav className={styles.navbar}>
         <ul>
-          <li className={styles.active}>
+          {navLinks.map((link, idx) => (
+            <li
+              key={idx}
+              className={idx === 0 ? styles.active : ""}
+              onClick={navLinkHandler}
+            >
+              <Link to={`/${link === "home" ? "" : link}`}>
+                <span className={styles["link-span"]}>0{idx} </span> {link}
+              </Link>
+            </li>
+          ))}
+          {/* <li className={styles.active}>
             <Link to="/">
               <span className={styles["link-span"]}>00</span> Home
             </Link>
@@ -60,7 +76,7 @@ const Header = () => {
             <Link to="/">
               <span className={styles["link-span"]}>03</span> Technology
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

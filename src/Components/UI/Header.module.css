@@ -63,8 +63,13 @@
   }
   .navbar a {
     font: var(--nav-text);
-    letter-spacing: 2px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 3px;
     text-decoration: none;
+    text-transform: uppercase;
     color: var(--powder-blue);
   }
 }
