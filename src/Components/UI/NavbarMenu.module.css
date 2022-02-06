@@ -32,11 +32,11 @@
   margin: 2rem 0;
 }
 
-.mobilenav li:hover {
+.mobilenav a:hover {
   border-right: 3px solid var(--powder-blue);
 }
 
-.mobilenav li.active {
+.mobilenav .active {
   border-right: 4px solid var(--white);
 }
 

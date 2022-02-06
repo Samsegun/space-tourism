@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
+// import { useState } from "react/cjs/react.development";
 import styles from "./NavbarMenu.module.css";
 import CloseNavbar from "./CloseNavbar";
 
 const NavbarMenu = props => {
-  // const [closeNav, setCloseNav] = useState(true);
+  // const navLinkHandler = () => {
+  //   console.log(props.navLinks);
+  // };
 
   return (
     <>
@@ -14,26 +16,17 @@ const NavbarMenu = props => {
           closeNavMenu={props.closeNavMenu}
         />
         <ul>
-          <li className={styles.active}>
-            <Link to="">
-              <span>00</span> Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/detsination">
-              <span>01</span> Destination
-            </Link>
-          </li>
-          <li>
-            <Link to="">
-              <span>02</span> Crew
-            </Link>
-          </li>
-          <li>
-            <Link to="">
-              <span>03</span> Technology
-            </Link>
-          </li>
+          {props.navLinks.map((link, idx) => (
+            <li key={idx}>
+              <Link
+                to={`/${link === "home" ? "" : link}`}
+                className={link === props.currentPage ? styles.active : ""}
+                onClick={props.navLinkHandler}
+              >
+                <span className={styles["link-span"]}>0{idx}</span> {link}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </>

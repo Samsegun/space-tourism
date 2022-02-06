@@ -52,10 +52,10 @@
     display: flex;
     align-items: center;
   }
-  .navbar li:hover {
-    border-bottom: 4px solid var(--powder-blue);
+  .navbar a:hover {
+    border-bottom: 3px solid var(--powder-blue);
   }
-  .navbar li.active {
+  .navbar a.active {
     border-bottom: 3px solid var(--white);
   }
   .navbar li:not(:last-of-type) {

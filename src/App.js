@@ -4,6 +4,8 @@ import Header from "./Components/UI/Header";
 import Home from "./Components/Home/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Destination from "./Components/Destination/Destination";
+import Crew from "./Components/Crew/Crew";
+import Technology from "./Components/Technology/Technology";
 
 function App() {
   return (
@@ -14,8 +16,14 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/destination">
+          <Route exact path="/destination">
             <Destination />
+          </Route>
+          <Route exact path="/crew">
+            <Crew />
+          </Route>
+          <Route exact path="/technology">
+            <Technology />
           </Route>
         </Switch>
       </div>

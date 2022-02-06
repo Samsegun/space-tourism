@@ -1,6 +1,15 @@
+/* div {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: black;
+  z-index: -1;
+}
+*/
 .ara {
   font-size: 5rem;
-  color: white;
+  color: blue;
   position: absolute;
   top: 400px;
 }
