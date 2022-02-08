@@ -1,9 +1,12 @@
 import styles from "./Destination.module.css";
+import DestinationContent from "./DestinatinationContent";
 
 const Destination = () => {
   return (
-    <div>
-      <h1 className={styles.ara}>Ara Adugbo!!!</h1>
+    <div className={styles["main-wrapper"]}>
+      <div className={styles.container}>
+        <DestinationContent />
+      </div>
     </div>
   );
 };

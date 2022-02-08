@@ -1,15 +1,20 @@
-/* div {
+.main-wrapper {
   position: absolute;
   top: 0;
+  left: 0;
+  /* padding: 2rem 1rem; */
+  background: url("../../assets/destination/background-destination-mobile.jpg")
+    center/cover no-repeat;
   width: 100%;
   min-height: 100vh;
-  background: black;
   z-index: -1;
 }
-*/
-.ara {
-  font-size: 5rem;
-  color: blue;
-  position: absolute;
-  top: 400px;
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* background: rgba(0, 0, 255, 0.342); */
 }
