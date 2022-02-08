@@ -36,7 +36,17 @@ const DestinationContent = () => {
         <div className={styles["destination-details"]}>
           <h1 className={styles.title}>{data.destinations[0].name}</h1>
 
-          <p>{data.destinations[0].description}</p>
+          <p className={styles.desc}>{data.destinations[0].description}</p>
+        </div>
+
+        <div className={styles["destination-estimates"]}>
+          <h2 className={styles.distance}>
+            avg. distance <span>{data.destinations[0].distance}</span>
+          </h2>
+
+          <h2 className={styles.distance}>
+            est. travel time <span>{data.destinations[0].travel}</span>
+          </h2>
         </div>
       </section>
     </main>

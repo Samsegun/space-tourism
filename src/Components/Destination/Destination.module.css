@@ -18,3 +18,10 @@
   margin: 0 auto;
   /* background: rgba(0, 0, 255, 0.342); */
 }
+
+@media (min-width: 768px) {
+  .main-wrapper {
+    background: url("../../assets/destination/background-destination-desktop.jpg")
+      center/cover no-repeat;
+  }
+}
