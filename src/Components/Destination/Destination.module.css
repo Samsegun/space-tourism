@@ -21,6 +21,13 @@
 
 @media (min-width: 768px) {
   .main-wrapper {
+    background: url("../../assets/destination/background-destination-tablet.jpg")
+      center/cover no-repeat;
+  }
+}
+
+@media (min-width: 969px) {
+  .main-wrapper {
     background: url("../../assets/destination/background-destination-desktop.jpg")
       center/cover no-repeat;
   }
