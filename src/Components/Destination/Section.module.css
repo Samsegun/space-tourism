@@ -1,0 +1,161 @@
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container {
+  width: 80%;
+  margin: 2rem auto;
+  animation: rotate 10s linear infinite;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.list {
+  width: 90%;
+  margin: 0 auto;
+  color: var(--white);
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list li {
+  padding-bottom: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.list li:hover {
+  border-bottom: 2px solid var(--powder-blue);
+}
+
+.active {
+  color: var(--white);
+  border-bottom: 2px solid var(--white);
+}
+
+.title {
+  font: var(--heading-3);
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.desc {
+  font: 1.1rem "Barlow Condensed", sans-serif;
+  color: var(--powder-blue);
+  text-align: center;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--powder-blue);
+}
+
+.destination-estimates {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.destination-estimates .distance {
+  color: var(--powder-blue);
+  letter-spacing: 2.35px;
+  font: var(--sub-heading-2);
+  text-transform: uppercase;
+  margin: 1rem auto;
+}
+
+.distance span {
+  display: block;
+  color: var(--white);
+  font: var(--sub-heading-1);
+  margin: 1rem 0;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 768px) {
+  section {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .img-container {
+    width: 60%;
+  }
+  .list {
+    width: 60%;
+    color: var(--powder-blue);
+    margin-top: 3rem;
+  }
+  .list li {
+    letter-spacing: 2.7px;
+  }
+  .title {
+    font: var(--heading-2);
+  }
+  .desc {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .destination-estimates {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 969px) {
+  section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 9rem;
+  }
+  .img-container {
+    flex: 100%;
+  }
+  .content-container {
+    flex: 100%;
+  }
+  .list {
+    font: var(--nav-text);
+    margin: 0;
+    width: 65%;
+  }
+  .list li {
+    padding-bottom: 0.7rem;
+  }
+  .title {
+    font: var(--heading-2);
+    text-align: left;
+  }
+  .desc {
+    font: var(--body-text);
+    line-height: 2;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: left;
+  }
+  .destination-estimates {
+    justify-content: flex-start;
+    gap: 3rem;
+    text-align: left;
+  }
+  .destination-estimates .distance {
+    margin: 1rem 0;
+  }
+  .distance span {
+    font: var(--sub-heading-1);
+  }
+}
