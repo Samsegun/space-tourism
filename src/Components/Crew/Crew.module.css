@@ -1,0 +1,100 @@
+.main-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem 1rem;
+  background: url("../../assets/crew/background-crew-mobile.jpg") center/cover
+    no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  top: 4rem;
+  min-height: 100vh;
+  /* width: 90%; */
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.title {
+  font: var(--heading-5);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--powder-blue);
+  letter-spacing: 4px;
+  word-spacing: 10px;
+}
+
+.title span {
+  color: var(--white);
+}
+
+.crew-info {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.crew-info_img {
+  border-bottom: 1px solid var(--powder-blue);
+}
+
+.crew-info_img img {
+  width: 75%;
+}
+
+.crew-info_details {
+  margin-top: 2.2rem;
+  padding-bottom: 10rem;
+}
+
+.active-member {
+  width: 50%;
+  margin: 0 auto;
+  height: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.active-member span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: rgb(97, 97, 97);
+  border-radius: 50%;
+}
+
+.active-member .active {
+  background-color: var(--white);
+}
+
+.crew-member {
+  padding: 2rem 0 1rem;
+}
+
+.crew-member_role {
+  font: var(--sub-heading-1);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--powder-blue);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.crew-member_name {
+  font: var(--sub-heading-1);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.crew-member_details {
+  font: var(--sub-heading-2);
+  font-size: 1.3rem;
+  color: var(--powder-blue);
+  line-height: 1.7;
+}

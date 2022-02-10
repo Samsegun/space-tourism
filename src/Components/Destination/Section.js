@@ -5,7 +5,11 @@ import { useState } from "react";
 const destinations = data.destinations;
 
 const Section = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(
+    localStorage.getItem("index") ? +localStorage.getItem("index") : 0
+  );
+
+  localStorage.setItem("index", active);
 
   const loadData = Event => {
     setActive(

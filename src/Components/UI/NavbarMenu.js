@@ -1,16 +1,12 @@
 import { Link } from "react-router-dom";
-// import { useState } from "react/cjs/react.development";
+
 import styles from "./NavbarMenu.module.css";
 import CloseNavbar from "./CloseNavbar";
 
 const NavbarMenu = props => {
-  // const navLinkHandler = () => {
-  //   console.log(props.navLinks);
-  // };
-
   return (
     <>
-      <div className={styles["mobilenav"]}>
+      <div className={`${styles.mobilenav}`}>
         <CloseNavbar
           className={styles.close}
           closeNavMenu={props.closeNavMenu}

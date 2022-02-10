@@ -9,7 +9,11 @@ const Header = () => {
 
   const [showNav, setShowNav] = useState(false);
 
-  const [currentPage, setCurrentPage] = useState(navLinks[0]);
+  const [currentPage, setCurrentPage] = useState(
+    localStorage.getItem("link") ? localStorage.getItem("link") : navLinks[0]
+  );
+
+  localStorage.setItem("link", currentPage);
 
   const navLinkHandler = Event => {
     const target = Event.target.textContent;
@@ -47,7 +51,8 @@ const Header = () => {
       {/* show toggle button when mobilenav is closed and vice-versa */}
       {!showNav && <NavbarButton onClick={navbuttonHandler} />}
 
-      {/* show mobile menu when mobilenav toggle  button is closed */}
+      {/* show mobile menu when mobilenav toggle  button is clicked */}
+
       {showNav && (
         <NavbarMenu
           navLinks={navLinks}
@@ -56,6 +61,16 @@ const Header = () => {
           navLinkHandler={navLinkHandler}
         />
       )}
+
+      {/* {showNav && (
+        <NavbarMenu
+          cla={showNav ? styles.show : ""}
+          navLinks={navLinks}
+          closeNavMenu={closeNavMenu}
+          currentPage={currentPage}
+          navLinkHandler={navLinkHandler}
+        />
+      )} */}
 
       <nav className={styles.navbar}>
         <ul>

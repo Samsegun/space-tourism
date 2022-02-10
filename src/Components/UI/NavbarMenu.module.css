@@ -4,8 +4,10 @@
   right: 0;
   width: 70%;
   height: 100vh;
-  background: rgba(41, 48, 82, 0.95);
+  background: rgba(224, 221, 221, 0.2);
+  backdrop-filter: blur(4rem);
   z-index: 2;
+  transition: all 0.5s ease-in-out;
 }
 
 .mobilenav .close {
