@@ -8,7 +8,7 @@ const Crew = () => {
   return (
     <div className={styles["main-wrapper"]}>
       <div className={styles.container}>
-        <main>
+        <main className={styles.main}>
           <h2 className={styles.title}>
             02 <span> meet your crew</span>
           </h2>
