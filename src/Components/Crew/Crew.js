@@ -1,10 +1,18 @@
 import styles from "./Crew.module.css";
 import data from "../../data.json";
+import { useState } from "react";
 
 const crew = data.crew;
-console.log(crew);
 
 const Crew = () => {
+  const [crewMember, setMember] = useState(crew[0]);
+
+  const memberHandler = Event => {
+    const crewMemberId = +Event.target.id;
+
+    setMember(crew[crewMemberId]);
+  };
+
   return (
     <div className={styles["main-wrapper"]}>
       <div className={styles.container}>
@@ -15,26 +23,32 @@ const Crew = () => {
 
           <section className={styles["crew-info"]}>
             <div className={styles["crew-info_img"]}>
-              <img src={crew[0].images.png} alt="" />
+              <img src={crewMember.images.png} alt={crewMember.name} />
             </div>
 
             <div className={styles["crew-info_details"]}>
               <div className={styles["active-member"]}>
-                <span className={styles["active"]}></span>
-                <span></span>
-                <span></span>
-                <span></span>
+                {crew.map((member, idx) => (
+                  <span
+                    key={idx}
+                    id={idx}
+                    className={
+                      member.name === crewMember.name ? styles["active"] : ""
+                    }
+                    onClick={memberHandler}
+                  ></span>
+                ))}
               </div>
 
               <div className={styles["crew-member"]}>
-                <h2 className={styles["crew-member_role"]}>Commander</h2>
-                <h1 className={styles["crew-member_name"]}>Douglas Hurley</h1>
+                <h2 className={styles["crew-member_role"]}>
+                  {crewMember.role}
+                </h2>
+                <h1 className={styles["crew-member_name"]}>
+                  {crewMember.name}
+                </h1>
               </div>
-              <p className={styles["crew-member_details"]}>
-                Douglas Gerald Hurley is an American engineer, former Marine
-                Corps pilot and former NASA astronaut. He launched into space
-                for the third time as commander of Crew Dragon Demo-2.
-              </p>
+              <p className={styles["crew-member_details"]}>{crewMember.bio}</p>
             </div>
           </section>
         </main>

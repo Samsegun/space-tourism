@@ -14,6 +14,9 @@ const Header = () => {
   );
 
   localStorage.setItem("link", currentPage);
+  // useEffect(() => {
+  //   localStorage.setItem("link", currentPage);
+  // }, [currentPage])
 
   const navLinkHandler = Event => {
     const target = Event.target.textContent;
@@ -24,7 +27,6 @@ const Header = () => {
   };
 
   const navbuttonHandler = () => {
-    // setShowNav(showNav ? false : true);
     setShowNav(true);
   };
 
