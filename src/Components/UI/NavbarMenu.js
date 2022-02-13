@@ -6,7 +6,11 @@ import CloseNavbar from "./CloseNavbar";
 const NavbarMenu = props => {
   return (
     <>
-      <div className={`${styles.mobilenav}`}>
+      <div
+        className={`${styles.mobilenav} ${
+          props.showNav ? styles["slide-in"] : styles["slide-out"]
+        }`}
+      >
         <CloseNavbar
           className={styles.close}
           closeNavMenu={props.closeNavMenu}

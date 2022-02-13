@@ -54,19 +54,16 @@ const Header = () => {
       {!showNav && <NavbarButton onClick={navbuttonHandler} />}
 
       {/* show mobile menu when mobilenav toggle  button is clicked */}
-
-      {showNav && (
-        <NavbarMenu
-          navLinks={navLinks}
-          closeNavMenu={closeNavMenu}
-          currentPage={currentPage}
-          navLinkHandler={navLinkHandler}
-        />
-      )}
+      <NavbarMenu
+        navLinks={navLinks}
+        closeNavMenu={closeNavMenu}
+        currentPage={currentPage}
+        navLinkHandler={navLinkHandler}
+        showNav={showNav}
+      />
 
       {/* {showNav && (
         <NavbarMenu
-          cla={showNav ? styles.show : ""}
           navLinks={navLinks}
           closeNavMenu={closeNavMenu}
           currentPage={currentPage}

@@ -77,3 +77,21 @@
   text-transform: uppercase;
   color: var(--powder-blue);
 }
+
+.title {
+  font: var(--sub-heading-1);
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.text {
+  font: var(--body-text);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  color: var(--powder-blue);
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 8rem;
+}
