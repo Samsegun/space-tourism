@@ -13,9 +13,7 @@ const Technology = () => {
         </h2>
 
         <section className={styles["tech-info"]}>
-          <div className={styles["img-container"]}>
-            <img src={technology[0].images.landscape} alt="" />
-          </div>
+          <div className={styles["img-container"]}></div>
 
           <div className={styles["tech-nav"]}>
             <button className={styles.active}>1</button>

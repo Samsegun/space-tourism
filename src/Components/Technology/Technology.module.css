@@ -15,26 +15,28 @@
   top: 4rem;
   min-height: 100vh;
   max-width: 1440px;
+  margin: auto;
 }
 
 .heading {
   font: var(--heading-5);
   font-size: 1.1rem;
-  margin: 1rem 0 2rem;
+  margin: 1.5rem 0 2rem;
   text-transform: uppercase;
   text-align: center;
   color: var(--powder-blue);
   letter-spacing: 4px;
-  /* word-spacing: 10px; */
 }
 
 .heading span {
   color: var(--white);
 }
 
-.img-container img {
+.img-container {
   width: 100%;
-  min-height: 10.6rem;
+  min-height: 11.6rem;
+  background: url("../../assets/technology/image-launch-vehicle-landscape.jpg")
+    center/cover no-repeat;
 }
 
 .tech-nav {
@@ -53,6 +55,7 @@
   outline: 0;
   border-radius: 50%;
   background: none;
+
   height: 43px;
 }
 
@@ -94,4 +97,101 @@
   width: 90%;
   margin: 0 auto;
   padding-bottom: 8rem;
+}
+
+@media (min-width: 535px) {
+  .img-container {
+    min-height: 17rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-wrapper {
+    background: url("../../assets/technology/background-technology-tablet.jpg")
+      center/cover no-repeat;
+  }
+  .heading {
+    margin: 3.8rem 0;
+    text-align: left;
+    padding-left: 2.4rem;
+  }
+  .img-container {
+    min-height: 20rem;
+  }
+  .tech-info {
+    width: 100%;
+  }
+  .title {
+    letter-spacing: 2px;
+  }
+  .text {
+    width: 50%;
+    font: var(--body-text);
+    letter-spacing: 1px;
+    line-height: 2;
+  }
+}
+
+@media (min-width: 969px) {
+  .main-wrapper {
+    background: url("../../assets/technology/background-technology-desktop.jpg")
+      center/cover no-repeat;
+  }
+  .heading {
+    width: 80%;
+    margin: 8rem auto 2rem;
+    padding-left: 0;
+    font: var(--heading-5);
+  }
+  .img-container {
+    min-height: 33rem;
+    background: url("../../assets/technology/image-launch-vehicle-portrait.jpg")
+      center/cover no-repeat;
+    flex-basis: 150%;
+  }
+  .tech-info {
+    width: 90%;
+    padding-bottom: 6.3rem;
+    gap: 4rem;
+  }
+  .tech-nav,
+  .page-article {
+    height: 19rem;
+  }
+  .tech-nav {
+    order: -1;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .title {
+    font: var(--heading-3);
+  }
+  .page-article {
+    order: -1;
+    text-align: left;
+  }
+  .text {
+    padding: 0;
+    font-size: 1.13rem;
+    width: 70%;
+    margin: 0;
+    text-align: left;
+    line-height: 2rem;
+    letter-spacing: 2px;
+  }
+  .tech-nav button {
+    font: var(--sub-heading-1);
+    padding-bottom: 2.2rem;
+  }
+  .tech-nav button:not(:last-of-type) {
+    /* margin: 0 0 2rem; */
+  }
+}
+
+@media (min-width: 1280px) {
+  .tech-info {
+    margin: 0 0 0 auto;
+  }
 }
