@@ -34,9 +34,11 @@
 
 .img-container {
   width: 100%;
+}
+
+.img-container img {
+  width: 100%;
   min-height: 11.6rem;
-  background: url("../../assets/technology/image-launch-vehicle-landscape.jpg")
-    center/cover no-repeat;
 }
 
 .tech-nav {
@@ -144,13 +146,14 @@
     font: var(--heading-5);
   }
   .img-container {
-    min-height: 33rem;
-    background: url("../../assets/technology/image-launch-vehicle-portrait.jpg")
-      center/cover no-repeat;
     flex-basis: 150%;
+  }
+  .img-container img {
+    min-height: 33rem;
   }
   .tech-info {
     width: 90%;
+    margin: 0 0 0 auto;
     padding-bottom: 6.3rem;
     gap: 4rem;
   }
@@ -166,7 +169,7 @@
     justify-content: space-between;
   }
   .title {
-    font: var(--heading-3);
+    font: var(--heading-4);
   }
   .page-article {
     order: -1;
@@ -178,20 +181,29 @@
     width: 70%;
     margin: 0;
     text-align: left;
-    line-height: 2rem;
-    letter-spacing: 2px;
+    line-height: 1.7rem;
+    letter-spacing: 1px;
   }
   .tech-nav button {
     font: var(--sub-heading-1);
     padding-bottom: 2.2rem;
-  }
-  .tech-nav button:not(:last-of-type) {
-    /* margin: 0 0 2rem; */
   }
 }
 
 @media (min-width: 1280px) {
   .tech-info {
     margin: 0 0 0 auto;
+  }
+  .title {
+    font: var(--heading-3);
+  }
+  .text {
+    line-height: 2rem;
+    letter-spacing: 2px;
+  }
+  .tech-nav button {
+    height: 5rem;
+    width: 5rem;
+    padding: 0;
   }
 }

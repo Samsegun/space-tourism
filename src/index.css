@@ -40,3 +40,7 @@ body {
 iframe {
   pointer-events: none;
 }
+
+.active {
+  border-bottom: 3px solid var(--white);
+}

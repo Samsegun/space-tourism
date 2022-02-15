@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import styles from "./NavbarMenu.module.css";
 import CloseNavbar from "./CloseNavbar";
@@ -18,13 +18,14 @@ const NavbarMenu = props => {
         <ul>
           {props.navLinks.map((link, idx) => (
             <li key={idx}>
-              <Link
-                to={`/${link === "home" ? "" : link}`}
-                className={link === props.currentPage ? styles.active : ""}
+              <NavLink
+                exact
+                to={`${link === "home" ? "/" : `/${link}`}`}
+                activeClassName={styles["active-class"]}
                 onClick={props.navLinkHandler}
               >
                 <span className={styles["link-span"]}>0{idx}</span> {link}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>

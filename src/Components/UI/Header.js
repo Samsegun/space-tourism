@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Header.module.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import NavbarButton from "./NavbarButton";
 import NavbarMenu from "./NavbarMenu";
 
@@ -9,14 +9,7 @@ const Header = () => {
 
   const [showNav, setShowNav] = useState(false);
 
-  const [currentPage, setCurrentPage] = useState(
-    localStorage.getItem("link") ? localStorage.getItem("link") : navLinks[0]
-  );
-
-  localStorage.setItem("link", currentPage);
-  // useEffect(() => {
-  //   localStorage.setItem("link", currentPage);
-  // }, [currentPage])
+  const [currentPage, setCurrentPage] = useState(navLinks[0]);
 
   const navLinkHandler = Event => {
     const target = Event.target.textContent;
@@ -62,26 +55,17 @@ const Header = () => {
         showNav={showNav}
       />
 
-      {/* {showNav && (
-        <NavbarMenu
-          navLinks={navLinks}
-          closeNavMenu={closeNavMenu}
-          currentPage={currentPage}
-          navLinkHandler={navLinkHandler}
-        />
-      )} */}
-
       <nav className={styles.navbar}>
         <ul>
           {navLinks.map((link, idx) => (
             <li key={idx}>
-              <Link
-                to={`/${link === "home" ? "" : link}`}
-                className={link === currentPage ? styles.active : ""}
+              <NavLink
+                exact
+                to={`${link === "home" ? "/" : `/${link}`}`}
                 onClick={navLinkHandler}
               >
                 <span className={styles["link-span"]}>0{idx}</span> {link}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>

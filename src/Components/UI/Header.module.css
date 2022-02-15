@@ -53,9 +53,6 @@
   .navbar a:hover {
     border-bottom: 3px solid var(--powder-blue);
   }
-  .navbar a.active {
-    border-bottom: 3px solid var(--white);
-  }
   .navbar li:not(:last-of-type) {
     margin-right: 2rem;
   }
@@ -83,9 +80,6 @@
     width: 35%;
     height: 0.1px;
     background: var(--powder-blue);
-
-    /* filter: blur(0.1px);
-    -webkit-filter: blur(0.1px); */
   }
   .navbar li span {
     display: inline-block;
