@@ -7,6 +7,26 @@
   z-index: 0;
 }
 
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(23, 23, 27, 0.645);
+  z-index: 1;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+.hidebackdrop {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.showbackdrop {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .navbar {
   display: none;
 }

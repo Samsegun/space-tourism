@@ -23,12 +23,12 @@
   outline: 0;
   border-radius: 50%;
   background: none;
-
   height: 43px;
 }
 
 .tech-nav button:hover {
   cursor: pointer;
+  border: 1px solid var(--white);
 }
 
 .tech-nav .active {

@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./TechContent.module.css";
 import data from "../../data.json";
+import { gsap } from "gsap";
 
 const technology = data.technology;
 
 const TechContent = () => {
+  let tech = useRef(null);
+
   // current terminology displayed on page
   const [active, setActive] = useState(technology[0]);
 
@@ -18,6 +21,15 @@ const TechContent = () => {
   };
 
   useEffect(() => {
+    // animation
+    gsap.from(tech.current, {
+      duration: 0.8,
+      opacity: 0,
+      y: 100,
+      ease: "bounce",
+      delay: 0.7,
+    });
+
     window
       .matchMedia("(min-width: 969px)")
       .addEventListener("change", Event => setMatches(Event.matches));
@@ -36,7 +48,7 @@ const TechContent = () => {
         {!matches && <img src={active.images.landscape} alt="" />}
       </div>
 
-      <div className={styles["tech-nav"]}>
+      <div className={styles["tech-nav"]} ref={tech}>
         {technology.map((tech, idx) => (
           <button
             key={idx}

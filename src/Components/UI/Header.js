@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Header.module.css";
 import { Link, NavLink } from "react-router-dom";
+import ReactDOM from "react-dom";
 import NavbarButton from "./NavbarButton";
 import NavbarMenu from "./NavbarMenu";
 
@@ -46,14 +47,36 @@ const Header = () => {
       {/* show toggle button when mobilenav is closed and vice-versa */}
       {!showNav && <NavbarButton onClick={navbuttonHandler} />}
 
-      {/* show mobile menu when mobilenav toggle  button is clicked */}
-      <NavbarMenu
+      {/* backdrop */}
+      {ReactDOM.createPortal(
+        <div
+          className={`${styles.backdrop} ${
+            !showNav ? styles.hidebackdrop : styles.showbackdrop
+          }`}
+          onClick={closeNavMenu}
+        ></div>,
+        document.getElementById("backdrop-root")
+      )}
+
+      {/* show mobile menu when toggle  button is clicked */}
+      {/* port navbarmenu before the root element */}
+      {ReactDOM.createPortal(
+        <NavbarMenu
+          navLinks={navLinks}
+          closeNavMenu={closeNavMenu}
+          currentPage={currentPage}
+          navLinkHandler={navLinkHandler}
+          showNav={showNav}
+        />,
+        document.getElementById("mobilenavbar-root")
+      )}
+      {/* <NavbarMenu
         navLinks={navLinks}
         closeNavMenu={closeNavMenu}
         currentPage={currentPage}
         navLinkHandler={navLinkHandler}
         showNav={showNav}
-      />
+      /> */}
 
       <nav className={styles.navbar}>
         <ul>
