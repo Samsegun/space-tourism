@@ -1,11 +1,13 @@
+import { useContext } from "react";
+import ShowNavContext from "../Context/shownav-context";
+
 const CloseNavbar = props => {
+  const ctx = useContext(ShowNavContext);
+
   // close mobile navbar handler
-  const closeNavHandler = Event => {
-    props.closeNavMenu();
-  };
 
   return (
-    <button className={props.className} onClick={closeNavHandler}>
+    <button className={ctx.close} onClick={ctx.showNav}>
       X
     </button>
   );

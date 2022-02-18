@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-
 import styles from "./NavbarMenu.module.css";
 import CloseNavbar from "./CloseNavbar";
 
@@ -11,10 +10,7 @@ const NavbarMenu = props => {
           props.showNav ? styles["slide-in"] : styles["slide-out"]
         }`}
       >
-        <CloseNavbar
-          className={styles.close}
-          closeNavMenu={props.closeNavMenu}
-        />
+        <CloseNavbar />
         <ul>
           {props.navLinks.map((link, idx) => (
             <li key={idx}>
@@ -22,7 +18,7 @@ const NavbarMenu = props => {
                 exact
                 to={`${link === "home" ? "/" : `/${link}`}`}
                 activeClassName={styles["active-class"]}
-                onClick={props.navLinkHandler}
+                onClick={props.closeNav}
               >
                 <span className={styles["link-span"]}>0{idx}</span> {link}
               </NavLink>

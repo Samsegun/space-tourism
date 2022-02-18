@@ -18,7 +18,7 @@
   transform: translateX(0%);
 }
 
-.mobilenav .close {
+/* .mobilenav .close {
   background: none;
   border: none;
   position: absolute;
@@ -28,7 +28,7 @@
   transform: scale(2);
   z-index: 4;
   cursor: pointer;
-}
+} */
 
 .mobilenav ul {
   position: relative;
