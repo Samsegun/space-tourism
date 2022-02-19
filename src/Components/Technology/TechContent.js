@@ -12,7 +12,8 @@ const TechContent = () => {
   const [active, setActive] = useState(technology[0]);
 
   //assign current viewport to a state
-  const [matches, setMatches] = useState(window.visualViewport.width > 969);
+  // const [matches, setMatches] = useState(window.visualViewport.width > 969);
+  const [matches, setMatches] = useState(window.innerWidth > 968);
 
   // this function resets 'active' state above on each button click
   const buttonHandler = Event => {
@@ -30,15 +31,29 @@ const TechContent = () => {
       delay: 0.7,
     });
 
-    window
-      .matchMedia("(min-width: 969px)")
-      .addEventListener("change", Event => setMatches(Event.matches));
+    function handleResize() {
+      if (window.innerWidth > 968) {
+        setMatches(true);
+      } else {
+        setMatches(false);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window
-        .matchMedia("(max-width: 968px)")
-        .removeEventListener("change", Event => setMatches(Event.matches));
+      window.removeEventListener("resize", handleResize);
     };
+
+    // window
+    //   .matchMedia("(min-width: 969px)")
+    //   .addEventListener("change", Event => setMatches(Event.matches));
+
+    // return () => {
+    //   window
+    //     .matchMedia("(min-width: 968px)")
+    //     .removeEventListener("change", Event => setMatches(Event.matches));
+    // };
   }, []);
 
   return (

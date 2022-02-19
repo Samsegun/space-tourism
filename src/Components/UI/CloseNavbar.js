@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import ShowNavContext from "../Context/shownav-context";
 
-const CloseNavbar = props => {
+const CloseNavbar = () => {
   const ctx = useContext(ShowNavContext);
 
   // close mobile navbar handler
