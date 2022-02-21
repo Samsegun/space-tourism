@@ -18,18 +18,6 @@
   transform: translateX(0%);
 }
 
-/* .mobilenav .close {
-  background: none;
-  border: none;
-  position: absolute;
-  top: 7%;
-  right: 13%;
-  color: var(--powder-blue);
-  transform: scale(2);
-  z-index: 4;
-  cursor: pointer;
-} */
-
 .mobilenav ul {
   position: relative;
   z-index: 3;

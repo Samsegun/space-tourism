@@ -5,12 +5,12 @@ import { useState } from "react";
 const crew = data.crew;
 
 const Crew = () => {
-  const [crewMember, setMember] = useState(crew[0]);
+  const [crewMember, setCrewMember] = useState(crew[0]);
 
   const memberHandler = Event => {
     const crewMemberId = +Event.target.id;
 
-    setMember(crew[crewMemberId]);
+    setCrewMember(crew[crewMemberId]);
   };
 
   return (

@@ -1,6 +1,6 @@
 .button {
-  width: 160px;
-  height: 160px;
+  width: 10rem;
+  height: 10rem;
   color: var(--dark-blue);
   font: var(--sub-heading-1);
   letter-spacing: 2.35px;
@@ -8,18 +8,26 @@
   cursor: pointer;
   border: none;
   outline: none;
+  overflow: hidden;
+  box-shadow: 6px 7px 40px -4px rgba(94, 89, 89, 0.5);
+  transition: outline 0.7s ease-in-out;
+  opacity: 0;
+}
+
+.button:hover {
+  outline: 46px solid rgba(11, 13, 23, 0.603);
 }
 
 @media (min-width: 768px) {
   .button {
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
   }
 }
 
 @media (min-width: 929px) {
   .button {
-    max-width: 274px;
-    max-height: 274px;
+    max-width: 17.1rem;
+    max-height: 17.1rem;
   }
 }
