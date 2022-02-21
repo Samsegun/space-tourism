@@ -4,10 +4,10 @@
   color: var(--dark-blue);
   font: var(--sub-heading-1);
   letter-spacing: 2.35px;
-  border-radius: 50%;
   cursor: pointer;
   border: none;
   outline: none;
+  border-radius: 50%;
   overflow: hidden;
   box-shadow: 6px 7px 40px -4px rgba(94, 89, 89, 0.5);
   transition: outline 0.7s ease-in-out;
