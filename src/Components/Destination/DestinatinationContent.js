@@ -1,12 +1,11 @@
 import styles from "./DestinationContent.module.css";
+import PageHeader from "../UI/PageHeader";
 import Section from "./Section";
 
 const DestinationContent = () => {
   return (
     <main className={styles.wrapper}>
-      <h2 className={styles.intro}>
-        <span>01</span> Pick your destination
-      </h2>
+      <PageHeader text="01" intro="pick your destination" />
 
       <Section />
     </main>

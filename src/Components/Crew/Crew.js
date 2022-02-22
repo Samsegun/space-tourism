@@ -1,4 +1,5 @@
 import styles from "./Crew.module.css";
+import PageHeader from "../UI/PageHeader";
 import data from "../../data.json";
 import { useState } from "react";
 
@@ -16,11 +17,12 @@ const Crew = () => {
   return (
     <div className={styles["main-wrapper"]}>
       <div className={styles.container}>
+        <PageHeader
+          className={styles["page-header"]}
+          text="02"
+          intro="meet your crew"
+        />
         <main className={styles.main}>
-          <h2 className={styles.title}>
-            02 <span> meet your crew</span>
-          </h2>
-
           <section className={styles["crew-info"]}>
             <div className={styles["crew-info_img"]}>
               <img src={crewMember.images.png} alt={crewMember.name} />

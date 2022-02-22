@@ -18,6 +18,12 @@
   margin: auto;
 }
 
+.page-header {
+  width: 90%;
+  margin-left: 10%;
+  padding-top: 7.6rem;
+}
+
 .heading {
   font: var(--heading-5);
   font-size: 1.1rem;
@@ -31,81 +37,6 @@
 .heading span {
   color: var(--white);
 }
-
-/* .img-container {
-  width: 100%;
-}
-
-.img-container img {
-  width: 100%;
-  min-height: 11.6rem;
-}
-
-.tech-nav {
-  margin: 34px 0 26px;
-  text-align: center;
-}
-
-.tech-nav button {
-  display: inline-block;
-  font: var(--sub-heading-1);
-  font-size: 1rem;
-  color: var(--powder-blue);
-  margin: 0 0.8rem;
-  padding: 0.7rem 0.9rem 0.9rem;
-  border: 1px solid var(--powder-blue);
-  outline: 0;
-  border-radius: 50%;
-  background: none;
-
-  height: 43px;
-}
-
-.tech-nav button:hover {
-  cursor: pointer;
-}
-
-.tech-nav .active {
-  background: var(--white);
-  color: var(--dark-blue);
-}
-
-.page-article {
-  text-align: center;
-}
-
-.intro {
-  font: var(--heading-5);
-  font-size: 1.2rem;
-  margin-bottom: 0.7rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--powder-blue);
-}
-
-.title {
-  font: var(--sub-heading-1);
-  text-transform: uppercase;
-  color: var(--white);
-  margin-bottom: 1rem;
-}
-
-.text {
-  font: var(--body-text);
-  font-size: 1rem;
-  letter-spacing: 2px;
-  line-height: 1.5;
-  color: var(--powder-blue);
-  width: 90%;
-  margin: 0 auto;
-  padding-bottom: 8rem;
-}
-
-@media (min-width: 535px) {
-  .img-container {
-    min-height: 17rem;
-  }
-} */
 
 @media (min-width: 768px) {
   .main-wrapper {
@@ -145,65 +76,4 @@
     padding-left: 0;
     font: var(--heading-5);
   }
-  /* .img-container {
-    flex-basis: 150%;
-  }
-  .img-container img {
-    min-height: 33rem;
-  }
-  .tech-info {
-    width: 90%;
-    margin: 0 0 0 auto;
-    padding-bottom: 6.3rem;
-    gap: 4rem;
-  }
-  .tech-nav,
-  .page-article {
-    height: 19rem;
-  }
-  .tech-nav {
-    order: -1;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .title {
-    font: var(--heading-4);
-  }
-  .page-article {
-    order: -1;
-    text-align: left;
-  }
-  .text {
-    padding: 0;
-    font-size: 1.13rem;
-    width: 70%;
-    margin: 0;
-    text-align: left;
-    line-height: 1.7rem;
-    letter-spacing: 1px;
-  }
-  .tech-nav button {
-    font: var(--sub-heading-1);
-    padding-bottom: 2.2rem;
-  } */
 }
-
-/* @media (min-width: 1280px) {
-  .tech-info {
-    margin: 0 0 0 auto;
-  }
-  .title {
-    font: var(--heading-3);
-  }
-  .text {
-    line-height: 2rem;
-    letter-spacing: 2px;
-  }
-  .tech-nav button {
-    height: 5rem;
-    width: 5rem;
-    padding: 0;
-  }
-} */

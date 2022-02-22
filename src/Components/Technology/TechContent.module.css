@@ -28,6 +28,8 @@
 
 .tech-nav button:hover {
   cursor: pointer;
+  background: var(--dark-blue);
+  color: var(--white);
   border: 1px solid var(--white);
 }
 

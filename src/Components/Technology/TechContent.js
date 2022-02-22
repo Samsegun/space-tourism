@@ -44,16 +44,6 @@ const TechContent = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-
-    // window
-    //   .matchMedia("(min-width: 969px)")
-    //   .addEventListener("change", Event => setMatches(Event.matches));
-
-    // return () => {
-    //   window
-    //     .matchMedia("(min-width: 968px)")
-    //     .removeEventListener("change", Event => setMatches(Event.matches));
-    // };
   }, []);
 
   return (
