@@ -6,6 +6,7 @@
   height: 100vh;
   background: rgba(224, 221, 221, 0.2);
   backdrop-filter: blur(4rem);
+  -webkit-backdrop-filter: blur(4rem);
   z-index: 2;
   transition: transform 0.5s ease;
 }
