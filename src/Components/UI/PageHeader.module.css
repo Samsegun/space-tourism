@@ -10,6 +10,7 @@
 
 .intro span {
   color: var(--powder-blue);
+  opacity: 0.5;
 }
 
 @media (min-width: 768px) {

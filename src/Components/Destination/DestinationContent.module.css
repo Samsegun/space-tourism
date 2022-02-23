@@ -4,19 +4,6 @@
   margin: 5.5rem auto 0;
 }
 
-/* .intro {
-  font: var(--heading-5);
-  text-transform: uppercase;
-  text-align: center;
-  padding: 1rem;
-  color: var(--white);
-  letter-spacing: 1.5px;
-}
-
-.intro span {
-  color: var(--powder-blue);
-} */
-
 @media (min-width: 535px) {
   .wrapper {
     width: 70%;
@@ -27,18 +14,10 @@
   .wrapper {
     width: 90%;
   }
-  /* .intro {
-    text-align: justify;
-    padding: 3rem 0 3.8rem;
-  } */
 }
 
 @media (min-width: 969px) {
   .wrapper {
     width: 80%;
   }
-  /* .intro {
-    padding: 76px 0 96px;
-    letter-spacing: 4px;
-  } */
 }

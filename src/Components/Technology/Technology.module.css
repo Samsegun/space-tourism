@@ -19,9 +19,8 @@
 }
 
 .page-header {
-  width: 90%;
-  margin-left: 10%;
-  padding-top: 7.6rem;
+  width: 100%;
+  padding: 2rem 0;
 }
 
 .heading {
@@ -43,32 +42,27 @@
     background: url("../../assets/technology/background-technology-tablet.jpg")
       center/cover no-repeat;
   }
+  .page-header {
+    width: 95%;
+    margin-left: 5%;
+    padding: 5.6rem 0 4rem;
+  }
   .heading {
     margin: 3.8rem 0;
     text-align: left;
     padding-left: 2.4rem;
   }
-  /* .img-container {
-    min-height: 20rem;
-  }
-  .tech-info {
-    width: 100%;
-  }
-  .title {
-    letter-spacing: 2px;
-  }
-  .text {
-    width: 50%;
-    font: var(--body-text);
-    letter-spacing: 1px;
-    line-height: 2;
-  } */
 }
 
 @media (min-width: 969px) {
   .main-wrapper {
     background: url("../../assets/technology/background-technology-desktop.jpg")
       center/cover no-repeat;
+  }
+  .page-header {
+    padding-top: 7.6rem;
+    width: 80%;
+    margin: 0 auto;
   }
   .heading {
     width: 80%;
