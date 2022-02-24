@@ -81,7 +81,7 @@ const Header = () => {
           <ul>
             {navLinks.map((link, idx) => (
               <li key={idx}>
-                <NavLink exact to={`${link === "home" ? "/" : `/${link}`}`}>
+                <NavLink to={`${link === "home" ? "/" : `/${link}`}`}>
                   <span className={styles["link-span"]}>0{idx}</span> {link}
                 </NavLink>
               </li>

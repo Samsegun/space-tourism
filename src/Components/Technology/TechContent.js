@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./TechContent.module.css";
 import data from "../../data.json";
-import { gsap } from "gsap";
 
 const technology = data.technology;
 
@@ -23,13 +22,13 @@ const TechContent = () => {
 
   useEffect(() => {
     // animation
-    gsap.from(tech.current, {
-      duration: 0.8,
-      opacity: 0,
-      y: 100,
-      ease: "bounce",
-      delay: 0.7,
-    });
+    // gsap.from(tech.current, {
+    //   duration: 0.8,
+    //   opacity: 0,
+    //   y: 100,
+    //   ease: "bounce",
+    //   delay: 0.7,
+    // });
 
     function handleResize() {
       if (window.innerWidth > 968) {

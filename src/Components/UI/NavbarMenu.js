@@ -15,9 +15,10 @@ const NavbarMenu = props => {
           {props.navLinks.map((link, idx) => (
             <li key={idx}>
               <NavLink
-                exact
                 to={`${link === "home" ? "/" : `/${link}`}`}
-                activeClassName={styles["active-class"]}
+                className={navData =>
+                  navData.isActive ? styles["active-class"] : ""
+                }
                 onClick={props.closeNav}
               >
                 <span className={styles["link-span"]}>0{idx}</span> {link}
