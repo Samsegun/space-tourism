@@ -82,12 +82,6 @@
     display: flex;
     align-items: center;
   }
-  .navbar a:hover {
-    border-bottom: 3px solid var(--powder-blue);
-  }
-  .navbar li:not(:last-of-type) {
-    margin-right: 2rem;
-  }
   .navbar a {
     font: var(--nav-text);
     height: 100%;
@@ -98,6 +92,13 @@
     text-decoration: none;
     text-transform: uppercase;
     color: var(--powder-blue);
+    transition: all 0.3s ease;
+  }
+  .navbar a:hover {
+    border-bottom: 3px solid var(--powder-blue);
+  }
+  .navbar li:not(:last-of-type) {
+    margin-right: 2rem;
   }
 }
 

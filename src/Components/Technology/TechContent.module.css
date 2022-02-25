@@ -1,10 +1,12 @@
 .img-container {
   width: 100%;
+  cursor: pointer;
 }
 
 .img-container img {
   width: 100%;
   min-height: 11.6rem;
+  /* transition: transform 0.4s ease; */
 }
 
 .tech-nav {
@@ -78,6 +80,10 @@
   .img-container {
     min-height: 20rem;
   }
+  /* .img-container img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  } */
   .tech-info {
     width: 100%;
   }

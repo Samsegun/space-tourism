@@ -3,6 +3,7 @@ import ShowNavContext from "../Context/shownav-context";
 import styles from "./Header.module.css";
 import { Link, NavLink } from "react-router-dom";
 import ReactDOM from "react-dom";
+import { motion } from "framer-motion";
 import NavbarButton from "./NavbarButton";
 import NavbarMenu from "./NavbarMenu";
 
@@ -11,14 +12,61 @@ const Header = () => {
 
   const [showNav, setShowNav] = useState(false);
 
-  // const [currentPage, setCurrentPage] = useState(navLinks[0]);
+  // for animations
+  const headerVariants = {
+    hidden: {
+      y: -100,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.3,
+        when: "beforeChildren",
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+  };
 
-  // const navLinkHandler = Event => {
-  //   const target = Event.target.textContent;
+  // for animations
+  const ulVariants = {
+    visible: {
+      y: 0,
+      opacity: 1,
+      staggerChildren: 0.9,
+      transition: {
+        // delay: 0.8,
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+      // transition: { delay: 0.6, staggerChildren: 0.09, delayChildren: 0.3 },
+    },
+    hidden: {
+      y: 50,
+      opacity: 0,
+    },
+  };
 
-  //   const newTarget = target.slice(3, target.length);
-
-  //   setCurrentPage(newTarget);
+  // for animations
+  // const listVariants = {
+  //   visible: {
+  //     y: 0,
+  //     opacity: 1,
+  //     transition: {
+  //       delay: 0.8,
+  //       type: "spring",
+  //       stiffness: 100,
+  //       damping: 10,
+  //     },
+  //   },
+  //   hidden: {
+  //     y: 50,
+  //     opacity: 0,
+  //   },
   // };
 
   const navbuttonHandler = () => {
@@ -36,7 +84,12 @@ const Header = () => {
         close: styles.close,
       }}
     >
-      <header className={styles.header}>
+      <motion.header
+        className={styles.header}
+        variants={headerVariants}
+        animate="visible"
+        initial="hidden"
+      >
         <div className={styles.logo}>
           <Link to="/">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
@@ -78,7 +131,7 @@ const Header = () => {
         )}
 
         <nav className={styles.navbar}>
-          <ul>
+          <motion.ul variants={ulVariants}>
             {navLinks.map((link, idx) => (
               <li key={idx}>
                 <NavLink to={`${link === "home" ? "/" : `/${link}`}`}>
@@ -86,9 +139,9 @@ const Header = () => {
                 </NavLink>
               </li>
             ))}
-          </ul>
+          </motion.ul>
         </nav>
-      </header>
+      </motion.header>
     </ShowNavContext.Provider>
   );
 };

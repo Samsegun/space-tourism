@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import styles from "./TechContent.module.css";
 import data from "../../data.json";
 
@@ -20,16 +21,25 @@ const TechContent = () => {
     setActive(technology[newIndex]);
   };
 
-  useEffect(() => {
-    // animation
-    // gsap.from(tech.current, {
-    //   duration: 0.8,
-    //   opacity: 0,
-    //   y: 100,
-    //   ease: "bounce",
-    //   delay: 0.7,
-    // });
+  // for animations
+  const navVariants = {
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.3,
+        type: "spring",
+        stiffness: 100,
+        damping: 30,
+      },
+    },
+    hidden: {
+      y: 200,
+      opacity: 0,
+    },
+  };
 
+  useEffect(() => {
     function handleResize() {
       if (window.innerWidth > 968) {
         setMatches(true);
@@ -47,12 +57,29 @@ const TechContent = () => {
 
   return (
     <section className={styles["tech-info"]}>
-      <div className={`${styles["img-container"]}`}>
+      <motion.div
+        className={`${styles["img-container"]}`}
+        whileHover={{
+          scale: 1.1,
+        }}
+        whileTap={{
+          scale: 0.9,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+      >
         {matches && <img src={active.images.portrait} alt="" />}
         {!matches && <img src={active.images.landscape} alt="" />}
-      </div>
+      </motion.div>
 
-      <div className={styles["tech-nav"]} ref={tech}>
+      <motion.div
+        className={styles["tech-nav"]}
+        ref={tech}
+        variants={navVariants}
+        animate="visible"
+        initial="hidden"
+      >
         {technology.map((tech, idx) => (
           <button
             key={idx}
@@ -62,7 +89,7 @@ const TechContent = () => {
             {++idx}
           </button>
         ))}
-      </div>
+      </motion.div>
 
       <article className={styles["page-article"]}>
         <h2 className={styles.intro}>the terminology...</h2>

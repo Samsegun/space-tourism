@@ -1,6 +1,7 @@
+import { useState } from "react";
 import styles from "./Section.module.css";
 import data from "../../data.json";
-import { useState } from "react";
+import { motion } from "framer-motion";
 
 const destinations = data.destinations;
 
@@ -16,9 +17,16 @@ const Section = () => {
   return (
     <section>
       <div className={styles["img-container"]}>
-        <img
+        <motion.img
           src={`${destinations[active].images.png}`}
           alt={`${destinations[active].name}`}
+          drag
+          dragConstraints={{
+            left: 10,
+            right: 20,
+            bottom: 100,
+            top: 5,
+          }}
         />
       </div>
 
