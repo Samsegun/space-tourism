@@ -24,7 +24,7 @@ const Section = () => {
           dragConstraints={{
             left: 10,
             right: 20,
-            bottom: 100,
+            bottom: 10,
             top: 5,
           }}
         />

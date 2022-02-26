@@ -4,7 +4,7 @@
   right: 0;
   width: 70%;
   height: 100vh;
-  background: rgba(224, 221, 221, 0.2);
+  background: #3d3d42;
   backdrop-filter: blur(4rem);
   -webkit-backdrop-filter: blur(4rem);
   z-index: 2;

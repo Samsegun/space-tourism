@@ -32,42 +32,23 @@ const Header = () => {
   };
 
   // for animations
-  const ulVariants = {
+  const listVariants = {
     visible: {
       y: 0,
       opacity: 1,
-      staggerChildren: 0.9,
+      staggerChildren: 0.3,
       transition: {
-        // delay: 0.8,
+        delay: 0.9,
         type: "spring",
         stiffness: 100,
         damping: 10,
       },
-      // transition: { delay: 0.6, staggerChildren: 0.09, delayChildren: 0.3 },
     },
     hidden: {
       y: 50,
       opacity: 0,
     },
   };
-
-  // for animations
-  // const listVariants = {
-  //   visible: {
-  //     y: 0,
-  //     opacity: 1,
-  //     transition: {
-  //       delay: 0.8,
-  //       type: "spring",
-  //       stiffness: 100,
-  //       damping: 10,
-  //     },
-  //   },
-  //   hidden: {
-  //     y: 50,
-  //     opacity: 0,
-  //   },
-  // };
 
   const navbuttonHandler = () => {
     setShowNav(true);
@@ -131,15 +112,20 @@ const Header = () => {
         )}
 
         <nav className={styles.navbar}>
-          <motion.ul variants={ulVariants}>
+          <ul>
             {navLinks.map((link, idx) => (
-              <li key={idx}>
+              <motion.li
+                key={idx}
+                variants={listVariants}
+                animate="visible"
+                initial="hidden"
+              >
                 <NavLink to={`${link === "home" ? "/" : `/${link}`}`}>
                   <span className={styles["link-span"]}>0{idx}</span> {link}
                 </NavLink>
-              </li>
+              </motion.li>
             ))}
-          </motion.ul>
+          </ul>
         </nav>
       </motion.header>
     </ShowNavContext.Provider>

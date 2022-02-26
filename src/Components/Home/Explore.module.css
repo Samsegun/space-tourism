@@ -13,10 +13,6 @@
   transition: outline 0.7s ease-in-out;
 }
 
-.button:hover {
-  outline: 46px solid rgba(11, 13, 23, 0.603);
-}
-
 @media (min-width: 768px) {
   .button {
     width: 12.5rem;
