@@ -45,7 +45,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Built with
 
 - [React](https://reactjs.org/) - JS library
-- context api, react portals
+- React router 6, context api, react portals
 - [Framer Motion](https://www.framer.com/motion/) - react library
 - CSS custom properties( css modules)
 - Flexbox
