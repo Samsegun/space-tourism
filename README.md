@@ -63,7 +63,7 @@ const listVariants = {
     transition: {
       delay: 1.1,
       when: "beforeChildren",
-      staggerChildren: 0.6,
+      staggerChildren: 0.4,
       // type: "spring",
       // stiffness: 100,
       // damping: 10,
