@@ -53,7 +53,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-This project made me realise how powerful the react library is. State management is still a huge task for now though. I had no idea what the "explore button" on the homepage is meant to do, so i played around with it by adding animations. Also, adding animations with framer motion is so cool. Below is a code snippet of the navbar animation.
+This project made me realise how powerful the react library is. State management is still a huge task for now though. I had no idea what the "explore button" on the homepage is meant to do, so i played around with it by adding animations. Below is a code snippet of the navbar animation.
 
 ```js
 const listVariants = {
