@@ -1,16 +1,17 @@
 section {
   position: relative;
   overflow: hidden;
+  height: auto;
 }
 
 .img-container {
   width: 80%;
   margin: 2rem auto;
-  animation: rotate 10s linear forwards;
 }
 
 .img-container img {
   width: 100%;
+  animation: rotate 15s linear forwards;
 }
 
 .img-container img:hover {
