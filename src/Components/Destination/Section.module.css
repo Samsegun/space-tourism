@@ -1,7 +1,8 @@
 section {
   position: relative;
   overflow: hidden;
-  height: auto;
+  min-height: 600px;
+  /* height: auto; */
 }
 
 .img-container {
@@ -126,6 +127,7 @@ section {
     display: flex;
     align-items: center;
     gap: 9rem;
+    margin-bottom: 4rem;
   }
   .img-container {
     flex: 100%;
