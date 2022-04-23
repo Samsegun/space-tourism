@@ -100,7 +100,7 @@ const Header = () => {
         {!showNav && <NavbarButton onClick={navbuttonHandler} />}
 
         {/* backdrop */}
-        {/* port backdrop before the root element */}
+        {/* port backdrop before the root element in index.html */}
         {ReactDOM.createPortal(
           <div
             className={`${styles.backdrop} ${
